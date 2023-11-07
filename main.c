@@ -7,18 +7,18 @@ extern void sub();
 
 int main(int argc, char *argv[])
 {
-  int i, average;
-  int sum;
+  int i; 
   int grade[SIZE];
-  sum = 0;
+  int score[SIZE];
   
-  for(i=0; i<SIZE; i++){
-  printf("학생 성적을 입력하세요 : ");
-  scanf("%d", &grade[i]);
-  sum += grade[i];
-  }
-  average = sum / SIZE;
-  printf("성적 평균 : %d\n", average);
+  for (i = 0; i < SIZE; i++)
+  grade[i] = rand()%100 + 1;
+  
+  for (i = 0; i< SIZE; i++)
+  score[i] = grade[i];
+  
+  for (i = 0; i < SIZE; i++)
+  printf("score[%d] = %d (grade: %i) \n", i, score[i], grade[i]);
        
   system("PAUSE");	
   return 0;
